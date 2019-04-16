@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 
 const port = process.env.PORT || 3001
 http.listen(port, function(){
-  console.log('listening on *:' + port);
+  console.log('Simulator listening on *:' + port);
 });
 
 io.on('connection', function (socket) {
