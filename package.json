@@ -1,0 +1,12 @@
+{
+  "name": "codeandrobots-simulator",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Code & Robots",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
