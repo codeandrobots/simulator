@@ -12,6 +12,10 @@ http.listen(port, function(){
 });
 
 io.on('connection', function (socket) {
+  var query = socket.handshake.query;
+  if(query && query.room) {
+    socket.join(room);
+  }
   socket.on('go', function (action) {
     console.log('--- action received: ' + action)
     io.emit('message', action);
