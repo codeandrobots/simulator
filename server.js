@@ -16,8 +16,13 @@ io.on('connection', function (socket) {
   if(query && query.room) {
     socket.join(query.room);
   }
-  socket.on('go', function (action) {
-    console.log('--- action received: ' + action)
-    io.emit('message', action);
+  socket.on('go', function (data) {
+    console.log('--- data received')
+    console.log(data)
+    if (data.room) {
+      io.in(data.room).emit('message', data.message);
+    } else {
+      io.emit('message', data.message);
+    }
   })
 })
