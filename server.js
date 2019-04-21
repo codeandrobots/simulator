@@ -25,4 +25,15 @@ io.on('connection', function (socket) {
       io.emit('message', data.message);
     }
   })
+  socket.on('event', function (data) {
+    console.log('--- event received')
+    console.log(data)
+    if (data.room) {
+      // Emit to all clients in data.room EXCEPT sender
+      io.broadcast.in(data.room).emit('event', data);
+    } else {
+      // Emit to all clients EXCEPT sender
+      io.broadcast.emit('message', data);
+    }
+  })
 })
