@@ -30,10 +30,10 @@ io.on('connection', function (socket) {
     console.log(data)
     if (data.room) {
       // Emit to all clients in data.room EXCEPT sender
-      io.broadcast.to(data.room).emit('event', data);
+      socket.broadcast.to(data.room).emit('event', data);
     } else {
       // Emit to all clients EXCEPT sender
-      io.broadcast.emit('message', data);
+      socket.broadcast.emit('message', data);
     }
   })
 })
