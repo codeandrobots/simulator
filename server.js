@@ -30,7 +30,7 @@ io.on('connection', function (socket) {
     console.log(data)
     if (data.room) {
       // Emit to all clients in data.room EXCEPT sender
-      io.broadcast.in(data.room).emit('event', data);
+      io.broadcast.to(data.room).emit('event', data);
     } else {
       // Emit to all clients EXCEPT sender
       io.broadcast.emit('message', data);
