@@ -1,5 +1,11 @@
 # Code & Robots Simulator
 
+## Open Source
+
+Code & Robots is completly FREE under the [MIT license](LICENSE). You can even use it commercially!
+
+## :rocket: How to setup and run the app
+
 ```
 $ yarn install
 $ npm start
@@ -7,6 +13,3 @@ $ npm start
 
 Connect socket io client to `http://localhost:3001`
 
-## Open Source
-
-Code & Robots is completly FREE under the [MIT license](LICENSE). You can even use it commercially!
