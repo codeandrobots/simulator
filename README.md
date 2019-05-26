@@ -2,7 +2,7 @@
 
 ## Open Source
 
-Code & Robots is completly FREE under the [MIT license](LICENSE). You can even use it commercially!
+Code & Robots is completly FREE under the [MIT license](https://github.com/codeandrobots/codeandrobots/blob/master/LICENSE). You can even use it commercially!
 
 ## :rocket: How to setup and run the app
 
